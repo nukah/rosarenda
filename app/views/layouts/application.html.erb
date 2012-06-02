@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+	<div id="wrapper">
+		<div id="header">
+		</div>
+		<div id="box_top"></div>
+		<div id="box">
+      		<div id="logo"><%= image_tag 'logo.png' %><%= link_to 'РосАренда', refinery.root_path %></div>
+        	<%= render '/refinery/header' -%>
+			<div class="content">
+        		<%= yield %>
+			</div>
+			<div class="cleared_bot"></div>
+		</div>
+			<div id="box_bottom"></div>
+      	<div id="box_shadow">
+
+		</div>
+    </div>
+  </body>
+</html>
