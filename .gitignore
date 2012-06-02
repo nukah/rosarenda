@@ -12,9 +12,8 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+log/
 /tmp
-# Rails
-.bundle
 db/*.sqlite3
 db/*.sqlite3-journal
 *.log
@@ -27,10 +26,9 @@ doc/app
 .yardoc
 .yardopts
 coverage
-
-# Public Uploads
 public/system/*
 public/themes/*
+public/
 
 # Public Cache
 public/javascripts/cache
