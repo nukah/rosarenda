@@ -144,15 +144,14 @@ dd.object {
  
 .deux {
 	margin-top: 50px;
-    left: 200px;
-	width: 526px;
+    width: 320px;
+    z-index: 5;
 	padding: 10px;
 	padding-top: 20px;
 	background: url("<%= asset_path 'bg_deux.png' %>") no-repeat top left; }
  
 p {
 	float: left;
-	font-size: 0.7em;
 	text-shadow: 0px 1px 1px white;
 	line-height: 2em;
 	display: block; }
@@ -327,6 +326,7 @@ ul.gallery {
 }
 .object_left h1 {
 	padding-bottom: 15px;
+	padding-right: 5px;
 	font-size: 165%;
 }
 .object_right {
@@ -337,8 +337,24 @@ ul.gallery {
 	color: #8a2721;
 	padding-bottom: 15px;
 }
+.object_right .rentcost {
+    color: #8a2721;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.object_right .rentcost span {
+    font-size: 2em;
+    letter-spacing: 1px;
+    color: #4365BF;
+    font-weight: bold;
+    border-bottom: 1px dotted #4365BF;
+}
 .object_right #map {
 	width: 300px;
 	height: 300px;
-	padding-bottom: 20px;
+	margin-bottom: 20px;
+	background-color: white;
+	padding: 2px;
+	border: 2px solid #8a2721;
 }
