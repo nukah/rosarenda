@@ -1,0 +1,7 @@
+ru:
+    yes: присутствует
+    no: отсутствует
+    refinery:
+        core:
+            config:
+                    site_name: РосАренда
