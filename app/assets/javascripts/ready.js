@@ -1,14 +1,11 @@
 $(document).ready(function() {
     $("ul.gallery li").hover(function() {
         var thumbOver = $(this).find("img").attr("src");
-        $(this).find("a.thumb").css({
-            'background': 'url(' + thumbOver + ') no-repeat center bottom'
-        });
-        $(this).find("span").stop().fadeTo('normal', 0,
+        $(this).find("img").stop().fadeTo('normal', 0.5,
         function() {
             $(this).hide()
         });				
     } , function() {
-        $(this).find("span").stop().fadeTo('normal', 1).show();			
+        $(this).find("img").stop().fadeTo('normal', 1).show();			
     });						
 });
