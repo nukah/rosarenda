@@ -7,7 +7,7 @@ Site::Application.routes.draw do
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
   mount Refinery::Core::Engine, :at => '/'
   root :to => 'objects#index'
-  match 'unknown' => 'utility#404'
+  match 'unknown' => 'utility#404_error'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
