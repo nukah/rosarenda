@@ -1,0 +1,7 @@
+<% if !@record.errors.any? %>
+Ваш почтовый адрес <b><%= @record.email %></b> добавлен в рассылку.
+
+Вы получите оповещение, когда новые объекты будут добавлены в базу.
+<% else %>
+<%= error_messages_for @record, :header_message => t('subscribe_errors'), :message => nil %>
+<% end %>
