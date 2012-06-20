@@ -12,3 +12,7 @@ end
 ActiveSupport.on_load(:active_record) do
   self.include_root_in_json = false
 end
+ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+  errors = Array(instance.error_message).join(',')
+  %(#{errors}).html_safe
+end

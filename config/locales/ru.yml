@@ -1,7 +1,13 @@
 ru:
     yes: присутствует
     no: отсутствует
+    subscribe_errors: 'При добавлении почтового адреса возникли следующие ошибки:'
+    invalid_confirm: 'Неверные данные'
     refinery:
         core:
             config:
                     site_name: РосАренда
+    object_mailer:
+        new_object:
+            subject: Добавление нового объекта на сайте Рос-Аренда
+        

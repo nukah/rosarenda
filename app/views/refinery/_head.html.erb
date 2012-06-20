@@ -8,7 +8,7 @@
   <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
   <%= yield :meta %>
 
-  <%= stylesheet_link_tag "application", "formatting" %>
+  <%= stylesheet_link_tag "formatting","application" %>
   <%= yield :stylesheets %>
 
   <%= render '/refinery/google_analytics' %>

@@ -6,7 +6,10 @@ group :development, :test do
 end
 
 group :production do
-  gem 'unicorn'
+  gem 'memcache-client'
+  gem 'therubyracer'
+  gem 'mysql2'
+  gem 'passenger'
 end
 
 group :assets do
@@ -16,8 +19,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "dynamic_form"
 gem 'refinerycms', '~> 2.0.0'
-gem 'refinerycms-objects', :git => 'git://github.com/nukah/refinerycms-objects.git'
+gem 'refinerycms-objects', :git => 'git@github.com:nukah/refinerycms-objects.git'
 gem 'refinerycms-page-images', '~> 2.0.0'
 gem 'rack-rewrite', '~> 1.0.2'
 gem 'refinerycms-i18n', '~> 2.0.0'
