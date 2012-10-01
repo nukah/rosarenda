@@ -1,6 +1,6 @@
 
 Site::Application.routes.draw do
-  root :to => 'main#index'
+#  root :to => 'main#index'
   match 'subscribe' => 'main#subscribe', :via => :post
   match 'unsubscribe/:code' => 'main#unsubscribe', :via => :get
   

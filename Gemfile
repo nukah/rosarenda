@@ -1,15 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails'
 group :development, :test do
   gem 'sqlite3'
 end
 
 group :production do
   gem 'memcache-client'
-  gem 'therubyracer'
   gem 'mysql2'
-  gem 'passenger'
+  gem 'unicorn'
 end
 
 group :assets do
@@ -20,8 +19,8 @@ end
 
 gem 'jquery-rails'
 gem "dynamic_form"
-gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms'
 gem 'refinerycms-objects', :git => 'git://github.com/nukah/refinerycms-objects.git'
-gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'refinerycms-page-images'
 gem 'rack-rewrite', '~> 1.0.2'
-gem 'refinerycms-i18n', '~> 2.0.0'
+gem 'refinerycms-i18n'
