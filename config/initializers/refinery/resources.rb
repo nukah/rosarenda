@@ -18,9 +18,9 @@ Refinery::Resources.configure do |config|
 
   # Configure Dragonfly
   # This is where in the middleware stack to insert the Dragonfly middleware
-  # config.dragonfly_insert_before = "ActionDispatch::Callbacks"
-  # config.dragonfly_secret = "fc5289e858768186b1e02e275f2913ac61472166744e6e2b"
-  # config.dragonfly_url_format = "/system/resources/:job/:basename.:format"
-  # config.datastore_root_path = "/Users/Mighty/Documents/Code/rosarenda/site/public/system/refinery/resources"
+  config.dragonfly_insert_before = "ActionDispatch::Callbacks"
+  config.dragonfly_secret = "fc5289e858768186b1e02e275f2913ac61472166744e6e2b"
+  config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
+  config.datastore_root_path = "/home/rosarenda/site/public/system/refinery/images"
 
 end

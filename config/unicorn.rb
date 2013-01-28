@@ -1,4 +1,4 @@
-worker_processes 8
+worker_processes 4
 timeout 30
 preload_app true
 pid '/home/rosarenda/tmp/pids/unicorn.pid'

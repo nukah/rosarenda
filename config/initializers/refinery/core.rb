@@ -11,7 +11,7 @@ Refinery::Core.configure do |config|
 
   # Whenever Refinery caches anything and can set a cache key, it will add
   # a prefix to the cache key containing the string you set here.
-  # config.base_cache_key = :refinery
+  config.base_cache_key = :refinery
 
   # Site name
   config.site_name = "RosArenda"
