@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121004105145) do
+ActiveRecord::Schema.define(:version => 20131209114118) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -81,6 +81,59 @@ ActiveRecord::Schema.define(:version => 20121004105145) do
   add_index "refinery_blog_posts", ["id"], :name => "index_refinery_blog_posts_on_id"
   add_index "refinery_blog_posts", ["slug"], :name => "index_refinery_blog_posts_on_slug"
 
+  create_table "refinery_contact_pages", :force => true do |t|
+    t.integer "contact_id"
+    t.integer "page_id"
+    t.string  "page_type",    :default => "Refinery::Page"
+    t.boolean "contact_info", :default => false
+  end
+
+  add_index "refinery_contact_pages", ["contact_id"], :name => "index_refinery_contact_pages_on_contact_id"
+  add_index "refinery_contact_pages", ["page_id"], :name => "index_refinery_contact_pages_on_page_id"
+
+  create_table "refinery_contacts", :force => true do |t|
+    t.string   "title"
+    t.string   "company"
+    t.string   "street"
+    t.string   "city"
+    t.string   "zip_code"
+    t.string   "province"
+    t.string   "country"
+    t.string   "tel1"
+    t.string   "tel2"
+    t.string   "tel3"
+    t.string   "fax"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "homepage"
+  end
+
+  create_table "refinery_contacts_mails", :force => true do |t|
+    t.integer "contact_id"
+    t.string  "mail"
+  end
+
+  add_index "refinery_contacts_mails", ["contact_id"], :name => "index_refinery_contacts_mails_on_contact_id"
+
+  create_table "refinery_hooks", :force => true do |t|
+    t.string   "name"
+    t.string   "tag"
+    t.string   "status"
+    t.text     "alt"
+    t.string   "klass"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_hostnames", :force => true do |t|
+    t.string   "hostname"
+    t.integer  "site_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "refinery_image_page_translations", :force => true do |t|
     t.integer  "refinery_image_page_id"
     t.string   "locale"
@@ -110,7 +163,6 @@ ActiveRecord::Schema.define(:version => 20121004105145) do
     t.integer  "image_width"
     t.integer  "image_height"
     t.string   "image_uid"
-    t.string   "image_ext"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
@@ -286,9 +338,18 @@ ActiveRecord::Schema.define(:version => 20121004105145) do
     t.string   "form_value_type"
     t.datetime "created_at",                         :null => false
     t.datetime "updated_at",                         :null => false
+    t.string   "slug"
   end
 
   add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
+
+  create_table "refinery_sites", :force => true do |t|
+    t.string   "name"
+    t.integer  "page_id"
+    t.string   "stylesheet"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
@@ -313,9 +374,11 @@ ActiveRecord::Schema.define(:version => 20121004105145) do
     t.datetime "reset_password_sent_at"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.string   "slug"
   end
 
   add_index "refinery_users", ["id"], :name => "index_refinery_users_on_id"
+  add_index "refinery_users", ["slug"], :name => "index_refinery_users_on_slug"
 
   create_table "seo_meta", :force => true do |t|
     t.integer  "seo_meta_id"
@@ -335,6 +398,7 @@ ActiveRecord::Schema.define(:version => 20121004105145) do
     t.string   "code"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "name"
   end
 
   create_table "taggings", :force => true do |t|

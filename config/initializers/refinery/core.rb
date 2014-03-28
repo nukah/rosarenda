@@ -36,7 +36,8 @@ Refinery::Core.configure do |config|
 
   # Show/hide IE6 upgrade message in the backend
   config.ie6_upgrade_message_enabled = true
-
+  config.register_javascript "refinery/contacts/admin/jquery.chosen.min.js"
+  config.register_stylesheet "refinery/contacts/admin/chosen.css"
   # Show/hide browser update message in the backend
   # config.show_internet_explorer_upgrade_message = false
   config.log_commands = true 

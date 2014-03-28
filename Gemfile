@@ -6,9 +6,15 @@ group :development, :test do
 end
 
 group :production do
-  gem 'memcache-client'
+  gem 'daemons'
+  gem 'therubyracer'
+  gem 'memcached'
+  gem 'delayed_job_active_record'
   gem 'mysql2'
   gem 'unicorn'
+  gem 'dalli'
+  gem 'identity_cache', :git => 'git://github.com/Shopify/identity_cache.git'
+  gem 'cityhash'
 end
 
 group :assets do
