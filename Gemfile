@@ -27,6 +27,7 @@ gem 'jquery-rails'
 gem "dynamic_form"
 gem 'refinerycms'
 gem 'refinerycms-settings'
+gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 gem 'refinerycms-objects', :git => 'git://github.com/nukah/refinerycms-objects.git'
 gem 'refinerycms-page-images'
 gem 'rack-rewrite', '~> 1.0.2'
