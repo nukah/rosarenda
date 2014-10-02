@@ -13,4 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require ready
-//= require fancybox
+//= require jquery.fancybox
