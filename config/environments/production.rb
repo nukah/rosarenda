@@ -3,7 +3,7 @@ Site::Application.configure do
 
   # Code is not reloaded between requests
   config.cache_classes = true
-
+  config.identity_cache_store = :mem_cache_store, Memcached::Rails.new(:servers => ["127.0.0.1"])
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -32,12 +32,13 @@ Site::Application.configure do
 
   # See everything in the log (default is :info)
   config.log_level = :info
-
+  config.cache_store = :dalli_store
+  config.action_controller.perform_caching = true
   # Prepend all log lines with the following tags
   config.log_tags = [ :subdomain ]
 
   # Use a different logger for distributed setups
-  # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
+  config.logger = Logger.new('/var/www/refinery/log/daily')
 
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store

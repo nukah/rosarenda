@@ -1,11 +1,11 @@
-worker_processes 4
+worker_processes 3
 timeout 30
 preload_app true
-pid '/home/rosarenda/tmp/pids/unicorn.pid'
-listen "/home/rosarenda/tmp/sockets/unicorn.sock", :backlog => 512
-stderr_path "/home/rosarenda/log/unicorn.stderr.log"
-stdout_path "/home/rosarenda/log/unicorn.stdout.log"
-user 'rosarenda'
+pid '/var/www/refinery/tmp/pids/unicorn.pid'
+listen "/var/www/refinery/tmp/sockets/unicorn.sock", :backlog => 512
+stderr_path "/var/www/refinery/log/unicorn.stderr.log"
+stdout_path "/var/www/refinery/log/unicorn.stdout.log"
+user 'user'
 
 before_fork do |server, worker|
   # Replace with MongoDB or whatever

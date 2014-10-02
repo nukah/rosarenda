@@ -8,8 +8,8 @@ end
 group :production do
   gem 'daemons'
   gem 'therubyracer'
+  gem 'sidekiq'
   gem 'memcached'
-  gem 'delayed_job_active_record'
   gem 'mysql2'
   gem 'unicorn'
   gem 'dalli'

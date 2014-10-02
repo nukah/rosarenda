@@ -21,6 +21,6 @@ Refinery::Resources.configure do |config|
   config.dragonfly_insert_before = "ActionDispatch::Callbacks"
   config.dragonfly_secret = "fc5289e858768186b1e02e275f2913ac61472166744e6e2b"
   config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
-  config.datastore_root_path = "/home/rosarenda/site/public/system/refinery/images"
+  config.datastore_root_path = "/var/www/refinery/public/system/refinery/images"
 
 end
