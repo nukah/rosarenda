@@ -220,10 +220,9 @@ ul.gallery {
 	ul.gallery li {
 		float: left;
 		margin: 10px 5px 10px 0px;
-		padding: 0;
 		text-align: center;
 		display: inline; /*--Gimp Fix aka IE6 Fix - Fixes double margin bug--*/
-		width: 100px;
+		width: 150px;
 		height: 100%;
 		background: white;
 		border: 1px solid #ccc;
@@ -237,6 +236,11 @@ ul.gallery {
 			height: 100px;
 			cursor: pointer;
 			display: block; }
+
+		ul.gallery li a img {
+		   height: auto;
+		   width: 120px;
+		}
 
 		ul.gallery li span {
 		  padding-top: 10px;
