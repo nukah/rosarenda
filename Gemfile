@@ -26,6 +26,7 @@ end
 gem 'jquery-rails'
 gem "dynamic_form"
 gem 'refinerycms'
+gem 'refinerycms-settings'
 gem 'refinerycms-objects', :git => 'git://github.com/nukah/refinerycms-objects.git'
 gem 'refinerycms-page-images'
 gem 'rack-rewrite', '~> 1.0.2'
